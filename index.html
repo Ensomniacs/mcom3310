@@ -1,9 +1,36 @@
 <!DOCTYPE html>
 <head>
     <meta charset="UFT-B">
-    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+    <!--<link rel="stylesheet" href="assets/css/style.css" type="text/css"> 
+        css will be activated into the stylesheet for next week's assignment -->
     <!-- css is not meant to be within style tags in an HTML document. It increases load times...-->
     <title>HTML Utilities</title>
+
+    <style>
+* {
+  margin-bottom: 100px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgba(168, 90, 2, 0.9);
+  color: #000;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1em;
+  line-height: 2em;
+  text-align: center;
+}
+
+#dont {
+  position: absolute;
+  Top: 0;
+  Left: 0;
+  z-index: -1;
+  opacity: 0.5;
+}
+    </style>
 </head>
 <body>
     <h1><a href="https://www.w3shools.com">Thoughts on HTML Utilities</a></h1>
@@ -35,7 +62,7 @@
         <li>Not powerful enoughon its own</li>
     </ol>
 </section>    
-    <p style="color: #40005a; background-color: #a590b6;">HTML has allowed widespread access to the internet on an international scale. In addition to access, this provided the opportunity for digital technologies to become a prominent tool in mass communication. In the beginning, HTML allowed earlier models of computers to be able to access information such as files and email. This opened a gateway for computers to be able to communicate with one another. In the 1980s, computers communicated using XML to display information on webpages. The first verison of HTML (HTML 1.2) was written in 1993 by <a href="https://www.w3.org/People/Berners-Lee/" title="Tim Berners-Lee from W3C">Tim Berners-Lee</a>.By the early 2000s, most web pages were marked up using HTML 4.01. These earlier versions of HTML had limitations on what information could be displayed. </p>
+    <p style="color: #40005a; background-color: #a590b6; border-style: dotted;">HTML has allowed widespread access to the internet on an international scale. In addition to access, this provided the opportunity for digital technologies to become a prominent tool in mass communication. In the beginning, HTML allowed earlier models of computers to be able to access information such as files and email. This opened a gateway for computers to be able to communicate with one another. In the 1980s, computers communicated using XML to display information on webpages. The first verison of HTML (HTML 1.2) was written in 1993 by <a href="https://www.w3.org/People/Berners-Lee/" title="Tim Berners-Lee from W3C">Tim Berners-Lee</a>.By the early 2000s, most web pages were marked up using HTML 4.01. These earlier versions of HTML had limitations on what information could be displayed. </p>
     <p style="border-style:ridge;">For example, HTML 1.2 allowed for basic headings, paragraphcs, anchors/links, lists, and images. HTML4.01  introduced the ability to stylize words on pages by <strong>bolding,</strong> <em>italicizing,</em> and <u>underlining</u> them as an examples. You could also include styling by embedding Cascading Style Sheets (CSS) and JavaScript (JS). Utilizing these additional features allowed pages to look more structured and become more interactive for users who accessed pages. As the internet and the way we communicate developed over time, HTML5 was then updated to allow us the option to include aduio, video, and canvas in addition to types of media we are able to display now. </p>
     <table>
         <tr>
@@ -59,4 +86,7 @@
             <td>Provides description to image or link on hover</td>
             <td>Was not an standard practice in earlier versions of HTML</td>
     </table>
+    <seciton id="dont">
+        <img src="assets/img/Background.png">
+    </seciton>
 </body>
