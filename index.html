@@ -1,44 +1,25 @@
 <!DOCTYPE html>
 <head>
-    <meta charset="UFT-B">
-    <!--<link rel="stylesheet" href="assets/css/style.css" type="text/css"> 
-        css will be activated into the stylesheet for next week's assignment -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+   <link rel="stylesheet" href="assets/css/style.css" type="text/css"> 
     <!-- css is not meant to be within style tags in an HTML document. It increases load times...-->
     <title>HTML Utilities</title>
 
-    <style>
-* {
-  margin-bottom: 100px;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: rgba(168, 90, 2, 0.9);
-  color: #000;
-  font-weight: 500;
-  font-style: normal;
-  font-size: 1em;
-  line-height: 2em;
-  text-align: center;
-}
-
-#dont {
-  position: absolute;
-  Top: 0;
-  Left: 0;
-  z-index: -1;
-  opacity: 0.5;
-}
-    </style>
 </head>
 <body>
+    <header id="top">
     <h1><a href="https://www.w3shools.com">Thoughts on HTML Utilities</a></h1>
-    <img src="https://enso.codes/portfolio/assets/img/scss-practice.jpg" height="400" alt="SCSS Practice">
+</header>
+<section class="home">
+    <img src="https://enso.codes/portfolio/assets/img/scss-practice.jpg" height="400" alt="SCSS Practice" class="rounded">
     <br>
     <a href="/table_layout.html"><h2>Table Layout page</h2></a>
 <br>
-    <img src="assets/img/oldtumblr-header.jpg" usemap="#abgt">
+</section>
+<section class="section">
+    <div class="container" id="imagemap">
+    <img src="assets/img/oldtumblr-header.jpg" usemap="#abgt" class="circle">
     <map name="abgt">
             <area  alt="" title="" href="https://enso.codes/" shape="rect" coords="166,29,267,135" style="outline:none;" target="_self"     />
             <area  alt="" title="" href="https://www.instagram.com/tonymcguinness/" shape="rect" coords="310,31,411,137" style="outline:none;" target="_self"     />
@@ -47,7 +28,20 @@ body {
             <area  alt="" title="" href="https://www.aboveandbeyond.nu/abgt" shape="rect" coords="743,32,844,138" style="outline:none;" target="_self"     />
     </map>
 
-<!-- "Section" is a replacement for "DIV"-->
+    <div class="imtext">
+    click on the top row of squares
+    </div>
+</section>
+<br>
+<br>
+<!-- Not using in-line block for this and using !important in CSS instead of using inline CSS. It is NOT recommended to put CSS in HTML.-->
+<a href="https://w3schools.com/" class="bttn">W3 Schools</a>
+<br>
+<br>
+<br>
+<a href="#top" class="bttn-c">Back to top</a>
+<br>
+<br>
 <section>
     <p>Awesome things about html</p>
     <ul style="list-style-type: lower-alpha;">

@@ -1,5 +1,5 @@
 * {
-  margin-bottom: 100px;
+  margin-bottom: 75px;
   box-sizing: border-box;
 }
 
@@ -14,10 +14,74 @@ body {
   text-align: center;
 }
 
+.content {
+  width: 100%;
+  margin: auto;
+}
+
+.container {
+  position: relative;
+  text-align: center;
+  color: navy;
+  font-weight: 700;
+  font-size: 2.5em;
+  text-transform: uppercase;
+}
+
+.imtext {
+  position: absolute;
+  top: 25%;
+  left: 33%;
+}
+
 #dont {
   position: absolute;
   Top: 0;
   Left: 0;
   z-index: -1;
   opacity: 0.5;
+}
+
+p {
+  color: navy;
+  text-align: left;
+}
+
+h1 {
+  color: tomato;
+  text-align: right;
+  font-family: sans-serif;
+}
+
+a:link {
+  color: tomato;
+}
+a:visited {
+  color: lightgreen;
+}
+
+.rounded {
+  border-radius: 30px;
+}
+
+.circle {
+  border-radius: 50%;
+}
+
+.bttn {
+  background-color: navy;
+  color: white !important;
+  padding: 15px 35px;
+  text-decoration: none;
+  font-size: 1.5rem;
+  border-radius: 10px;
+}
+
+.bttn-c {
+  background-color: tomato;
+  color: white !important;
+  padding: 15px 35px;
+  text-decoration: none;
+  font-size: 1.5rem;
+  border-radius: 50%;
 }/*# sourceMappingURL=style.css.map */
