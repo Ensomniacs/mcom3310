@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link href="assets/css/style.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale.css"/>
+<link rel="stylesheet" href="https://unpkg.com/tippy.js/themes/translucent.css">
+<script>
+    const storedTheme = localStorage.getItem("theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    if (storedTheme) document.documentElement.setAttribute("data-theme", storedTheme); 
+</script>
+
+</head>
+<body>
+
+<div class="wrapper">
+    <header class="index">
+        <div class="logo"><a href="/" class="active">Enso.codes</a></div>
+        <div class="darkmode">
+            <button class="theme-toggle" title="dark/light mode" type="button">
+                <span class="toggle"></span>
+            </button>
+    </div>
+        <nav>
+            <ul class="grid-5">
+                <li><div class="name"><a href="/archive">Archive</a></div>
+                <div class="description">Historical designs, development, and concept art.</div></li>
+                <li><div class="name"><a href="https://eliemory.wordpress.com/">Blog</a></div><div class="description">A peek into the reflection pool of projects.</div></li>
+                <li><div class="name"><a href="/contact">Contact</a></div><div class="description">Get in contact with Enso</div></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="view" id="index">
+        <div class="wrapper">
+            <div class="highlight">
+                <div class="text">
+                    <h2>Arripe Gladium: SOTP</h2>
+                    <p>Paragraph about this project will go here. Go over what it was and who was involved briefly before expanding into unknown territory</p>
+                    <div class="link"><a class="header" href="https://eliemory.wordpress.com/2022/03/15/origins/">Read About it</a></div>
+                </div>
+                <div class="controls">
+                    <div class="id">001</div>
+                </div>
+            </div>
+            <div class="image-wrapper">
+                <div class="images">
+
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    const btns = document.querySelectorAll(".theme-toggle");
+    btns.forEach((btn) => {
+    btn.addEventListener("click", function () {
+        let currentTheme = document.documentElement.getAttribute("data-theme");
+        let targetTheme = "light";
+
+        if (currentTheme === "light") {
+            targetTheme = "dark";
+        }
+
+        document.documentElement.setAttribute("data-theme", targetTheme);
+        localStorage.setItem("theme", targetTheme);
+    });
+});
+
+tippy('.theme-toggle', {
+    content: 'dark/light mode',
+placement: 'bottom',
+animation: 'shift-toward-subtle',
+theme: 'translucent',});
+    </script>
+<!-- ICONS: phosphor --><script src="https://unpkg.com/phosphor-icons"></script>
+<!-- ICONS: Lucide --><script src="https://unpkg.com/lucide@latest"></script>
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="https://unpkg.com/tippy.js@6"></script>
+</body>
+</html>
