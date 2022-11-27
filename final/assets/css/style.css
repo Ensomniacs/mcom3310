@@ -68,7 +68,7 @@ html {
   --interaction-2: #ccc9;
   --background-color-hightlight: #e1989e9a;
   --text-color-hightlight: #e1989e;
-  --transform-mode: translateX(14px);
+  --transform-mode: translateX(0.875em);
   --active-blob: calc(translateY(50%));
 }
 
@@ -266,7 +266,7 @@ p:last-child {
 
 @media screen and (max-width: 900px) {
   html {
-    font-size: 14px;
+    font-size: 0.875em;
   }
 }
 #wrapper {
@@ -399,7 +399,7 @@ header {
   grid-template-columns: auto auto;
   justify-content: space-between;
   margin: 0 auto;
-  max-width: 1920px;
+  max-width: 98vw;
   padding: 64px 10rem;
   position: relative;
   row-gap: 64px;
@@ -408,7 +408,7 @@ header {
 }
 
 header .logo {
-  font-weight: 400;
+  font-weight: 600;
 }
 
 nav {
@@ -493,7 +493,7 @@ footer {
   align-items: end;
   display: grid;
   margin: 0 auto;
-  max-width: 1920px;
+  max-width: 98vw;
   opacity: 0.4;
   padding: 64px 10rem;
   -webkit-user-select: none;
@@ -507,6 +507,23 @@ footer {
   footer {
     padding: 32px;
   }
+  body {
+    font-size: 1.4rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  header {
+    padding: 64px 3em;
+  }
+  nav ul li .description {
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
 }
 #index {
   align-content: space-between;
@@ -519,7 +536,7 @@ footer {
   gap: 64px;
   grid-template-columns: 1fr 1fr;
   margin: 0 auto;
-  max-width: 1920px;
+  max-width: 98vw;
   padding: 0 10rem;
   width: 100%;
 }
@@ -609,38 +626,6 @@ footer {
   transform: scale(0.8);
 }
 
-@media (prefers-color-scheme: dark) and (max-width: 600px) {
-  #index .wrapper .controls .next:active svg {
-    --text-color-1:#000;
-  }
-}
-#index .wrapper .controls .next:active:before {
-  background-color: var(--text-color-highlight);
-  border-color: rgba(0, 0, 0, 0);
-  transform: scale(0.9);
-}
-
-@media (hover: hover) {
-  #index .wrapper .controls .next:hover:before {
-    transform: scale(1.1);
-  }
-  #index .wrapper .controls .next:active svg {
-    --text-color-1:#ccc;
-    transform: scale(0.8);
-  }
-}
-@media (hover: hover) and (prefers-color-scheme: dark) and (max-width: 600px) {
-  #index .wrapper .controls .next:active svg {
-    --text-color-1:#000;
-  }
-}
-@media (hover: hover) {
-  #index .wrapper .controls .next:active:before {
-    background-color: var(--text-color-highlight);
-    border-color: rgba(0, 0, 0, 0);
-    transform: scale(0.9);
-  }
-}
 #index .wrapper .image-wrapper {
   align-self: start;
   position: relative;
@@ -680,9 +665,9 @@ footer {
     margin: 16px 0 0;
   }
   #index .wrapper .highlight .text .link svg {
-    height: 14px;
+    height: 0.875em;
     margin: 2px 0 0;
-    width: 14px;
+    width: 0.875em;
   }
 }
 #archive .grid {
@@ -698,6 +683,7 @@ footer {
 
 button.theme-toggle {
   display: flex;
+  float: right;
 }
 
 span.toggle {
