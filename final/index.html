@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link href="assets/css/style.css" rel="stylesheet">
-<link href="assests/css/mobile.css" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
@@ -19,16 +18,16 @@
 <body>
 
 <div class="wrapper">
-    <header class="index">
+    <header class="index" id="header">
         <div class="logo"><a href="/" class="active">Enso.codes</a></div>
         <div class="darkmode">
-            <button class="theme-toggle" title="dark/light mode" type="button">
+            <button class="theme-toggle" aria-label="dark/light mode" type="button">
                 <span class="toggle"></span>
             </button>
     </div>
         <nav>
             <ul class="grid-5">
-                <li><div class="name"><a href="/archive">Archive</a></div>
+                <li><div class="name"><a href="https://enso.codes/portfolio">Archive</a></div>
                 <div class="description">Historical designs, development, and concept art.</div></li>
                 <li><div class="name"><a href="https://eliemory.wordpress.com/">Blog</a></div><div class="description">A peek into the reflection pool of projects.</div></li>
                 <li><div class="name"><a href="/contact">Contact</a></div><div class="description">Get in contact with Enso</div></li>
@@ -39,65 +38,47 @@
         <div class="wrapper">
             <div class="highlight">
                 <div class="text">
-                    <h2>Arripe Gladium</h2>
-                    <p>Paragraph about this project will go here. Go over what it was and who was involved briefly before expanding into unknown territory</p>
-                    <div class="link"><a class="header" href="https://eliemory.wordpress.com/2022/03/15/origins/">Read About it</a></div>
+                    <h2>Hot Springs Friends of the Parks</h2>
+                    <p>Showcase portfolio of all work completed during the Information Technology minor courses at UALR.</p>
+                    <div class="link"><a class="header" href="https://web-projects.net/hsfp">Live Site</a></div>
                 </div>
                 <div class="controls">
                     <div class="id">001</div>
                 </div>
             </div>
             <div class="image-wrapper">
+                <img src="assets/img/hsfp.png" class="image dl">
+            </div>
+            <div class="highlight">
+                <div class="text">
+                    <h2>ZEROSEV</h2>
+                    <p>Professional working portfolio website design for Brian Alvarado, a 2D/3D Multi-disciplinary designer based in Florida.</p>
+                    <div class="link"><a class="header" href="https://zerosev.com">Live Site</a></div>
+                </div>
+                <div class="controls">
+                    <div class="id">002</div>
+                </div>
+            </div>
+            <div class="image-wrapper">
                 <div class="images">
-                    <img src="assets/img/AGTeam2.png" class="image">
+                    <img src="https://enso.codes/assets/img/projects/zerosev.webp" class="image">
                 </div>
             </div>
             <div class="highlight">
                 <div class="text">
-                    <h2>Arripe Gladium</h2>
-                    <p>Paragraph about this project will go here. Go over what it was and who was involved briefly before expanding into unknown territory</p>
+                    <h2>Season of the Plague</h2>
+                    <p>Season of the Plague was a community project inspired by <a href="https://bungie.net">Bungie's</a> <em>Destiny 2</em>. This collaborative project brought together artists, animators, developers, and content creators looking to improve their skills and strengthen their portfolios while sharing their love for the world of <em>Destiny</em>.</p>
                     <div class="link"><a class="header" href="https://eliemory.wordpress.com/2022/03/15/origins/">Read About it</a></div>
                 </div>
                 <div class="controls">
-                    <div class="id">001</div>
+                    <div class="id">003</div>
                 </div>
             </div>
             <div class="image-wrapper">
                 <div class="images">
-                    <img src="assets/img/AGTeam2.png" class="image">
+                    <img src="https://enso.codes/sotp/assets/img/gallery/SotP-Masthead.jpg" class="image dl">
                 </div>
             </div>
-            <div class="highlight">
-                <div class="text">
-                    <h2>Arripe Gladium</h2>
-                    <p>Paragraph about this project will go here. Go over what it was and who was involved briefly before expanding into unknown territory</p>
-                    <div class="link"><a class="header" href="https://eliemory.wordpress.com/2022/03/15/origins/">Read About it</a></div>
-                </div>
-                <div class="controls">
-                    <div class="id">001</div>
-                </div>
-            </div>
-            <div class="image-wrapper">
-                <div class="images">
-                    <img src="assets/img/AGTeam2.png" class="image">
-                </div>
-            </div>
-            <div class="highlight">
-                <div class="text">
-                    <h2>Arripe Gladium</h2>
-                    <p>Paragraph about this project will go here. Go over what it was and who was involved briefly before expanding into unknown territory</p>
-                    <div class="link"><a class="header" href="https://eliemory.wordpress.com/2022/03/15/origins/">Read About it</a></div>
-                </div>
-                <div class="controls">
-                    <div class="id">001</div>
-                </div>
-            </div>
-            <div class="image-wrapper">
-                <div class="images">
-                    <img src="assets/img/AGTeam2.png" class="image">
-                </div>
-            </div>
-            
         </div>
     </main>
 </div>
@@ -117,17 +98,18 @@
         localStorage.setItem("theme", targetTheme);
     });
 });
-
-tippy('.theme-toggle', {
-    content: 'dark/light mode',
-placement: 'bottom',
-animation: 'shift-toward-subtle',
-theme: 'translucent',});
     </script>
 <!-- ICONS: phosphor --><script src="https://unpkg.com/phosphor-icons"></script>
 <!-- ICONS: Lucide --><script src="https://unpkg.com/lucide@latest"></script>
 <script src="https://unpkg.com/@popperjs/core@2"></script>
 <script src="https://unpkg.com/tippy.js@6"></script>
 <script src="assets/js/menu.js"></script>
+<script>
+    tippy('.theme-toggle', {
+        content: 'Dark/Light Mode',
+    placement: 'bottom',
+    animation: 'shift-toward-subtle',
+    theme: 'translucent',});
+</script>
 </body>
 </html>
