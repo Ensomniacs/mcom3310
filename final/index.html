@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale.css"/>
 <link rel="stylesheet" href="https://unpkg.com/tippy.js/themes/translucent.css">
+<!-- ICONS: Lucide --><script src="https://unpkg.com/lucide@latest"></script>
 <script>
     const storedTheme = localStorage.getItem("theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
     if (storedTheme) document.documentElement.setAttribute("data-theme", storedTheme); 
@@ -24,7 +25,7 @@
             <button class="theme-toggle" aria-label="dark/light mode" type="button">
                 <span class="toggle"></span>
             </button>
-    </div>
+         </div>
         <nav>
             <ul class="grid-5">
                 <li><div class="name"><a href="https://enso.codes/portfolio">Archive</a></div>
@@ -81,6 +82,19 @@
             </div>
         </div>
     </main>
+
+    <footer id="index">
+        <ul class="grid-5">
+            <li>
+                <div class="description">Reach me at</div>
+                <div class="name"><a href="mailto:enso@enso.codes">enso@enso.codes</a></div>
+            </li>
+            <li>
+                <div class="name">Social</div>
+                <div class="description"><a href="https://linkedin.com/in/eli-brewer"><i class="social" icon-name="linkedin"></i></a> <a href="https://github.com/ensomniacs"><i class="social" icon-name="github"></i></a> <a href="https://instagram.com/ensocodes"><i class="social" icon-name="instragram"></i></a> <a href="https://twitch.tv/ensomniacs" class="tw"><i class="social" icon-name="twitch"></i></a> <a href="https://linktr.ee/ensomniacs" class="lt"><i class="social" icon-name="tree-pine"></i></a></div>
+            </li>
+        </ul>
+    </footer>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script>
@@ -109,7 +123,10 @@
         content: 'Dark/Light Mode',
     placement: 'bottom',
     animation: 'shift-toward-subtle',
-    theme: 'translucent',});
+    theme: 'translucent',},
+    );
+
+    lucide.createIcons();
 </script>
 </body>
 </html>

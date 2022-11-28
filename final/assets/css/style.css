@@ -65,8 +65,8 @@ html {
   --text-color-3: #b3b3b3;
   --interaction-1: #e1989c9a;
   --interaction-2: #ccc9;
-  --background-color-hightlight: #e1989e9a;
-  --text-color-hightlight: #e1989e;
+  --background-color-highlight: #e1989e9a;
+  --text-color-highlight: #e1989e;
   --transform-mode: translateX(0.875em);
   --active-blob: calc(translateY(50%));
 }
@@ -140,13 +140,13 @@ p a {
 @media (hover: hover) {
   a:hover {
     -webkit-text-decoration-color: var(--text-color-highlight);
-    text-decoration-color: var(--text-color-hightlight);
+    text-decoration-color: var(--text-color-highlight);
   }
 }
 @media (prefers-color-scheme: dark) and (max-width: 600px) {
   a {
-    -webkit-text-decoration-color: rgba(204, 204, 204, 0.2);
-    text-decoration-color: rgba(204, 204, 204, 0.2);
+    -webkit-text-decoration-color: var(--background-color-highlight);
+    text-decoration-color: var(--background-color-highlight);
   }
   a:active {
     -webkit-text-decoration-color: rgba(204, 204, 204, 0.6);
@@ -234,17 +234,6 @@ p:last-child {
 #wrapper {
   display: grid;
   min-height: 100vh;
-}
-
-#loading {
-  align-items: center;
-  display: flex;
-  height: 100%;
-  justify-content: center;
-  left: 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
 }
 
 @-webkit-keyframes rotate-linear {
@@ -437,6 +426,23 @@ header a.active:before {
   opacity: 0;
 }
 
+footer {
+  align-items: end;
+  display: grid;
+  margin: 0 auto;
+  max-width: 98vw;
+  opacity: 0.9;
+  padding: 4rem 10rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
+  width: 100%;
+}
+footer a i {
+  color: var(--background-color-highlight);
+}
+
 @media screen and (max-width: 1300px) {
   header.inline .logo {
     left: calc(50% - 512px);
@@ -454,20 +460,6 @@ header a.active:before {
     top: 32px;
   }
 }
-footer {
-  align-items: end;
-  display: grid;
-  margin: 0 auto;
-  max-width: 98vw;
-  opacity: 0.4;
-  padding: 64px 10rem;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-   -ms-user-select: none;
-       user-select: none;
-  width: 100%;
-}
-
 @media screen and (max-width: 900px) {
   footer {
     padding: 2em;
@@ -576,17 +568,6 @@ footer {
     width: 0.875em;
   }
 }
-#archive .grid {
-  display: grid;
-  gap: 4em;
-  grid-template-columns: repeat(3, 1fr);
-  margin: 0 auto;
-  max-width: 1920px;
-  min-height: calc(100vh - 480px);
-  padding: 0 10rem;
-  width: 100%;
-}
-
 button.theme-toggle {
   display: flex;
   float: right;
@@ -633,4 +614,9 @@ span.toggle:active::after {
   margin: 15px;
   z-index: 10;
   border-radius: 4px;
+}
+
+.social:hover {
+  stroke: var(--text-color-highlight);
+  transition: all ease-in-out 0.2s;
 }/*# sourceMappingURL=style.css.map */
