@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link href="assets/css/style.css" rel="stylesheet">
+<link href="../assets/css/style.css" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
@@ -14,7 +14,6 @@
     const storedTheme = localStorage.getItem("theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
     if (storedTheme) document.documentElement.setAttribute("data-theme", storedTheme); 
 </script>
-
 </head>
 <body>
 
@@ -31,26 +30,42 @@
                 <li><div class="name"><a href="https://enso.codes">Portfolio</a></div>
                 <div class="description">Historical designs, development, and concept art.</div></li>
                 <li><div class="name"><a href="https://ensomniacs.github.io/mcom3310/final">Blog</a></div><div class="description">A peek into the reflection pool of projects.</div></li>
-                <li><div class="name"><a href="mailto:enso@enso.codes">Contact</a></div><div class="description">Shoot me an email!</div></li>
+                <li><div class="name"><a href="mailto:enso@enso.codes">Contact</a></div><div class="description">Send me an email!</div></li>
             </ul>
         </nav>
     </header>
-    <main class="view" id="index">
-        <div class="wrapper">
-            <div class="highlight">
+    <main class="view" id="blog">
+        <div class="wrapper list">
+            <div class="entry">
                 <div class="text">
-                    <h2>Ethics of AI Art</h2>
-                    <p>A study about the ethics surrounding the creation and use of AI Art in the modern age.</p>
-                    <div class="link"><a class="header" href="/blog/ethics.thml">Read more</a></div>
+                    <h3><a href="/blog/ethics.html">Ethics of AI Art</a></h3>
+                    <div class="posted">
+                        <time datetime="2022-12-10 11:30am">Dec 2022</time>
+                    </div>
                 </div>
-                <div class="controls">
-                    <div class="id">001</div>
+                <div class="content">
+                    <div class="block markdown"><p>Project desciption about the goals of this project will go here. Understanding the impact of AI Art in the digital age.</p></div>
+                </div>
+            <div class="text">
+                <h3><a href="/blog/ethics.html">Ethics of AI Art</a></h3>
+                <div class="posted">
+                    <time datetime="2022-12-10 11:30am">Dec 2022</time>
                 </div>
             </div>
-            <div class="image-wrapper">
-                <img src="" class="image dl">
+            <div class="content">
+                <p>Project desciption about the goals of this project will go here. Understanding the impact of AI Art in the digital age.</p>
+            </div>
+            <div class="text">
+                <h3><a href="/blog/ethics.html">Ethics of AI Art</a></h3>
+                <div class="posted">
+                    <time datetime="2022-12-10 11:30am">Dec 2022</time>
+                </div>
+            </div>
+            <div class="content">
+                <p>Project desciption about the goals of this project will go here. Understanding the impact of AI Art in the digital age.</p>
             </div>
         </div>
+    </div>
     </main>
 
     <footer id="index">
@@ -61,7 +76,7 @@
             </li>
             <li>
                 <div class="name"><h3>Social</h3></div>
-                <div class="description"><a href="https://linkedin.com/in/eli-brewer"><i class="social" icon-name="linkedin"></i></a> <a href="https://github.com/ensomniacs"><i class="social" icon-name="github"></i></a> <a href="https://instagram.com/ensocodes"><i class="social" icon-name="instragram"></i></a> <a href="https://twitch.tv/ensomniacs" class="tw"><i class="social" icon-name="twitch"></i></a> <a href="https://linktr.ee/ensomniacs" class="lt"><i class="social" icon-name="tree-pine"></i></a></div>
+                <div class="description"><a href="https://linkedin.com/in/eli-brewer"><i class="social" icon-name="linkedin"></i></a> <a href="https://github.com/ensomniacs"><i class="social" icon-name="github"></i></a> <a href="https://instagram.com/ensocodes"><i class="social" icon-name="instagram"></i></a> <a href="https://twitch.tv/ensomniacs" class="tw"><i class="social" icon-name="twitch"></i></a> <a href="https://linktr.ee/ensomniacs" class="lt"><i class="social" icon-name="tree-pine"></i></a></div>
             </li>
         </ul>
     </footer>
@@ -87,7 +102,7 @@
 <!-- ICONS: Lucide --><script src="https://unpkg.com/lucide@latest"></script>
 <script src="https://unpkg.com/@popperjs/core@2"></script>
 <script src="https://unpkg.com/tippy.js@6"></script>
-<script src="assets/js/menu.js"></script>
+<script src="../assets/js/menu.js"></script>
 <script>
     tippy('.theme-toggle', {
         content: 'Dark/Light Mode',

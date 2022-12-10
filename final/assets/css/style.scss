@@ -2,7 +2,7 @@
 
 *{-webkit-tap-highlight-color:transparent;box-sizing:border-box} 
 a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,hr,html,i,iframe,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{border:0;font-size:100%;font:inherit;margin:0;padding:0;vertical-align:initial} 
-article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block} 
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,time{display:block} 
 main{line-height:1} 
 ol,ul{list-style:none} 
 blockquote,q{quotes:none;
@@ -41,6 +41,18 @@ p{line-height:1.4;margin:0 0 .4rem} p:last-child{margin:0}
 
 @media screen and (max-width:900px){html{font-size:0.875em} } 
 #wrapper{display:grid;min-height:100vh}
+#blog .wrapper {display:grid;gap:5em;grid-template-columns:1fr;margin:0 auto;max-width:85vw;padding:0 10rem;width:100%;}
+#blog .wrapper .entry .text{display:grid;grid-template-columns:auto auto;justify-content:space-between;margin:0 0 5em}
+#blog .wrapper .entry .text h3{padding:0 32px 0 0}
+#blog .wrapper .entry .text .posted{opacity:.6}
+#blog .wrapper .entry .content{display:grid;gap:32px}
+#blog .wrapper .entry .content .block.markdown p{line-height:1.6;margin:0 0 1rem;max-width:1024px}
+#blog .wrapper .entry .content .block h3{font-weight:500;margin:32px 0 16px}
+#blog .wrapper .entry .content .block h3:first-child{margin:16px 0}
+#blog .wrapper .entry .content .block.file .image-wrapper{background-color:var(--background-color-2);position:relative;width:100%}
+#blog .wrapper .entry .content .block.file .image-wrapper .image:first-child{background-size:cover}
+#blog .wrapper.list{gap:16px}#blog .wrapper.list .entry .text{margin:0 0 16px}
+
 @keyframes rotate-linear{0%{transform:rotate(0deg)} 50%{transform:rotate(180deg)} to{transform:rotate(1turn)} } 
 
 @keyframes rotate-and-scale-out{0%,to{opacity:0;transform:scale(0)} 12.5%{opacity:.4} 25%{opacity:0;transform:scale(1.2)} } .grid-5{grid-template-columns:repeat(5,1fr)} .grid-4,.grid-5{column-gap:64px;display:grid;row-gap:32px;width:100%} .grid-4{grid-template-columns:repeat(4,1fr)} .grid-3{column-gap:64px;display:grid;grid-template-columns:repeat(3,1fr);row-gap:32px;width:100%} @media screen and (max-width:1700px){.grid-5{grid-template-columns:repeat(4,1fr)} .grid-4{grid-template-columns:repeat(3,1fr)}} 
@@ -61,7 +73,7 @@ footer{align-items:end;display:grid;margin:0 auto;max-width:85vw;opacity:.9;padd
 
 @media screen and (max-width:1300px){header.inline .logo{left:calc(50% - 512px);padding:0 32px}} 
 @media screen and (max-width:1024px){header.inline .logo{left:0;top:32px} header.inline nav{padding:0 32px;right:0;top:32px}} 
-@media screen and (max-width:900px){footer{padding: 2em} body{font-size:1.4rem;} } 
+@media screen and (max-width:900px){footer{padding: 2em} body{font-size:1.4rem;} #blog .wrapper{padding:128px 32px 0}#blog .wrapper .entry .text{gap:.75em;grid-template-columns:1fr}#blog .wrapper .entry .content .block.code pre{font-size:12px}#blog .wrapper .entry .content .block h3{margin:24px 0 16px}#blog .wrapper .entry .content .block h3:first-child{margin:8px 0 16px}#blog .wrapper .entry .content .block.file figcaption p{font-size:10px;margin:0 0 6px}#blog .wrapper .entry .content .block.file figcaption p:last-child{margin:0}#blog .wrapper .entry .content .block .source{font-size:10px}} 
 @media screen and (max-width:600px){
     header{padding: 4em 3em;} 
     nav ul li .description{clip:rect(1px, 1px, 1px, 1px);height: 1px;margin: -1px;overflow: hidden;padding: 0;position: absolute;width: 1px;}
@@ -81,6 +93,7 @@ footer{align-items:end;display:grid;margin:0 auto;max-width:85vw;opacity:.9;padd
         & .image-wrapper{align-self:start;position:relative;-webkit-user-select:none;user-select:none;width:100%;}
     }
 }
+
 @media screen and (max-width:1440px){#index .wrapper .highlight .text {
     & p{font-size:1.2rem;line-height:1.8}
     & h2{font-size:2.2rem;text-transform:uppercase;line-height:38px;margin:0 0 16px} } }

@@ -12,7 +12,7 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
   vertical-align: initial;
 }
 
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, time {
   display: block;
 }
 
@@ -234,6 +234,69 @@ p:last-child {
 #wrapper {
   display: grid;
   min-height: 100vh;
+}
+
+#blog .wrapper {
+  display: grid;
+  gap: 5em;
+  grid-template-columns: 1fr;
+  margin: 0 auto;
+  max-width: 85vw;
+  padding: 0 10rem;
+  width: 100%;
+}
+
+#blog .wrapper .entry .text {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  margin: 0 0 5em;
+}
+
+#blog .wrapper .entry .text h3 {
+  padding: 0 32px 0 0;
+}
+
+#blog .wrapper .entry .text .posted {
+  opacity: 0.6;
+}
+
+#blog .wrapper .entry .content {
+  display: grid;
+  gap: 32px;
+}
+
+#blog .wrapper .entry .content .block.markdown p {
+  line-height: 1.6;
+  margin: 0 0 1rem;
+  max-width: 1024px;
+}
+
+#blog .wrapper .entry .content .block h3 {
+  font-weight: 500;
+  margin: 32px 0 16px;
+}
+
+#blog .wrapper .entry .content .block h3:first-child {
+  margin: 16px 0;
+}
+
+#blog .wrapper .entry .content .block.file .image-wrapper {
+  background-color: var(--background-color-2);
+  position: relative;
+  width: 100%;
+}
+
+#blog .wrapper .entry .content .block.file .image-wrapper .image:first-child {
+  background-size: cover;
+}
+
+#blog .wrapper.list {
+  gap: 16px;
+}
+
+#blog .wrapper.list .entry .text {
+  margin: 0 0 16px;
 }
 
 @-webkit-keyframes rotate-linear {
@@ -467,6 +530,32 @@ footer a i {
   }
   body {
     font-size: 1.4rem;
+  }
+  #blog .wrapper {
+    padding: 128px 32px 0;
+  }
+  #blog .wrapper .entry .text {
+    gap: 0.75em;
+    grid-template-columns: 1fr;
+  }
+  #blog .wrapper .entry .content .block.code pre {
+    font-size: 12px;
+  }
+  #blog .wrapper .entry .content .block h3 {
+    margin: 24px 0 16px;
+  }
+  #blog .wrapper .entry .content .block h3:first-child {
+    margin: 8px 0 16px;
+  }
+  #blog .wrapper .entry .content .block.file figcaption p {
+    font-size: 10px;
+    margin: 0 0 6px;
+  }
+  #blog .wrapper .entry .content .block.file figcaption p:last-child {
+    margin: 0;
+  }
+  #blog .wrapper .entry .content .block .source {
+    font-size: 10px;
   }
 }
 @media screen and (max-width: 600px) {
