@@ -14,10 +14,10 @@
     const storedTheme = localStorage.getItem("theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
     if (storedTheme) document.documentElement.setAttribute("data-theme", storedTheme); 
 </script>
-
+<!-- This script saves the data on reload for the Light/Dark Mode Toggle in the upper right corner of the page.-->
 </head>
 <body>
-
+<!-- I used CSS Grid instead of flexbox or table elements.-->
 <div class="wrapper">
     <header class="index" id="header">
         <div class="logo"><a href="/" class="active">Blog.Enso</a></div>
@@ -39,16 +39,25 @@
         <div class="wrapper">
             <div class="highlight">
                 <div class="text">
-                    <h2>Ethics of AI Art</h2>
-                    <p>A study about the ethics surrounding the creation and use of AI Art in the modern age.</p>
-                    <div class="link"><a class="header" href="/blog/ethics.thml">Read more</a></div>
-                </div>
-                <div class="controls">
-                    <div class="id">001</div>
+                    <h2>Ethics of AI Art: Understanding AI Technology & Privacy Concerns</h2>
+                    <time datetime="2022-12-10 11:30am">Dec 2022</time>
+                    <p>Within the last month, social media feeds have been flooded with batch posts of multifaceted stylized “magic avatars” created using the Lensa app. Lensa is the latest photo editing app to take the internet by storm because its latest feature allows users to create “magic avatars” from a series of selfies they upload themselves...</p>
+                    <div class="link">[<a class="header" href="blog/ethics.html">Read more</a>]</div>
                 </div>
             </div>
             <div class="image-wrapper">
-                <img src="" class="image dl">
+                <img src="https://media1.giphy.com/media/pOEbLRT4SwD35IELiQ/giphy.gif?cid=ecf05e4772d6aqva3zdynj594473lhiir3gtoqfp1nyxua7e&rid=giphy.gif&ct=g" class="image dl">
+            </div>
+            <div class="highlight">
+                <div class="text">
+                    <h2>Arripe Gladium: A Year in Review</h2>
+                    <h4><time datetime="2022-03-15 11:30am">March 2022</time></h4>
+                    <p>One year ago, during Spring 2021, I enrolled in IFSC 3342 – Mobile Web Design. In this course, we were taught about progressive enhancement, building up from mobile first, and various other skillsets to keep user accessibility in mind. Our final project was to create a mobile friendly website of our choosing so long as it had the capability of being accessible on Mobile, Tablet, and Desktop view....</p>
+                    <div class="link">[<a class="header" href="https://eliemory.wordpress.com/2022/03/15/origins/">Read more</a>]</div>
+                </div>
+            </div>
+            <div class="image-wrapper">
+                <img src="https://eliemory.files.wordpress.com/2022/03/arripeog.png?w=1024" class="image dl">
             </div>
         </div>
     </main>
@@ -61,7 +70,7 @@
             </li>
             <li>
                 <div class="name"><h3>Social</h3></div>
-                <div class="description"><a href="https://linkedin.com/in/eli-brewer"><i class="social" icon-name="linkedin"></i></a> <a href="https://github.com/ensomniacs"><i class="social" icon-name="github"></i></a> <a href="https://instagram.com/ensocodes"><i class="social" icon-name="instragram"></i></a> <a href="https://twitch.tv/ensomniacs" class="tw"><i class="social" icon-name="twitch"></i></a> <a href="https://linktr.ee/ensomniacs" class="lt"><i class="social" icon-name="tree-pine"></i></a></div>
+                <div class="description"><a href="https://linkedin.com/in/eli-brewer"><i class="social" icon-name="linkedin"></i></a> <a href="https://github.com/ensomniacs"><i class="social" icon-name="github"></i></a> <a href="https://instagram.com/ensocodes"><i class="social" icon-name="instagram"></i></a> <a href="https://twitch.tv/ensomniacs" class="tw"><i class="social" icon-name="twitch"></i></a> <a href="https://linktr.ee/ensomniacs" class="lt"><i class="social" icon-name="tree-pine"></i></a></div>
             </li>
         </ul>
     </footer>
@@ -83,6 +92,7 @@
     });
 });
     </script>
+    <!-- tool tip script to display tippy on hover for Light/Dark Mode toggle in the uppper right-->
 <!-- ICONS: phosphor --><script src="https://unpkg.com/phosphor-icons"></script>
 <!-- ICONS: Lucide --><script src="https://unpkg.com/lucide@latest"></script>
 <script src="https://unpkg.com/@popperjs/core@2"></script>
