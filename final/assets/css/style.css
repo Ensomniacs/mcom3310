@@ -285,7 +285,7 @@ p:last-child {
   text-indent: 1.5em;
   line-height: 1.6;
   margin: 0 0 1rem;
-  max-width: 1024px;
+  max-width: 90vw;
 }
 #blog .wrapper .entry .content .block.markdown blockquote {
   margin-left: 1.5em;
@@ -554,7 +554,7 @@ footer a i {
     font-size: 1.4rem;
   }
   #blog .wrapper {
-    padding: 128px 32px 0;
+    padding: 5rem 2rem 0;
   }
   #blog .wrapper .entry .text {
     gap: 0.75em;
@@ -578,6 +578,17 @@ footer a i {
   }
   #blog .wrapper .entry .content .block .source {
     font-size: 10px;
+  }
+  #index .wrapper {
+    padding: 4em 2em 6em;
+  }
+  #index .wrapper .highlight .text .link {
+    margin: 16px 0 0;
+  }
+  #index .wrapper .highlight .text .link svg {
+    height: 0.875em;
+    margin: 2px 0 0;
+    width: 0.875em;
   }
 }
 @media screen and (max-width: 600px) {
@@ -648,7 +659,22 @@ footer a i {
        user-select: none;
   width: 100%;
 }
+#index #blog .wrapper {
+  padding: 5rem 2rem 0;
+}
+#index #index .wrapper, #index #blog .wrapper {
+  max-width: 70vw;
+}
+#index footer {
+  max-width: 98vw;
+}
 
+@media screen and (min-width: 1441px) {
+  #blog .wrapper .entry .content .block.markdown p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+  }
+}
 @media screen and (max-width: 1440px) {
   #index .wrapper .highlight .text p {
     font-size: 1.2rem;
@@ -665,28 +691,6 @@ footer a i {
   #index .wrapper {
     gap: 2em;
     grid-template-columns: 1fr;
-  }
-}
-@media screen and (max-width: 900px) {
-  #index .wrapper {
-    padding: 4em 2em 6em;
-  }
-  #index .wrapper .highlight .text .link {
-    margin: 16px 0 0;
-  }
-  #index .wrapper .highlight .text .link svg {
-    height: 0.875em;
-    margin: 2px 0 0;
-    width: 0.875em;
-  }
-}
-@media screen and (max-width: 600px) {
-  #index .wrapper {
-    max-width: 98vw;
-    padding: 2em 1.5em 3em;
-  }
-  footer {
-    max-width: 98vw;
   }
 }
 button.theme-toggle {
